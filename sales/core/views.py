@@ -11,7 +11,7 @@ def home(request):
         sum = 0
         for invoice in invoices:
             sum += invoice.book.price
-        total = sum / salesman.percentage
+        total = sum * salesman.percentage / 100
         context = {
             'invoices': invoices,
             "total": total,

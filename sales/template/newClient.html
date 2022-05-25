@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div id="client" class="">
+    <form method="POST">
+      {% csrf_token %}
+      <legend>New Client</legend>
+      <fieldset>
+        <label for="name">Name: </label>
+        <input type="text" name="name" id="name">
+      </fieldset>
+      <input type="submit" name="newClnt" id="newClnt" value="Add">
+    </form>
+  </div>
+{% endblock %}
